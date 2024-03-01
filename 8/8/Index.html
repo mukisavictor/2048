@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="Index.css" />
+    <title>SignUp</title>
+    <style type="text/css">
+      body {
+        margin: 0px;
+        background-color: #ddd;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        width: 100%;
+        background-color: rgb(44, 2, 2);
+      }
+      .header .nav-bar ul {
+        display: flex;
+        list-style: none;
+      }
+      .header .nav-bar ul li {
+        margin-right: 10px;
+      }
+      .header .nav-bar ul li a {
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bolder;
+        color: #fff;
+        padding: 10px 5px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #logo {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .header .nav-bar ul li a:hover {
+        color: gold;
+        outline: thin dotted;
+      }
+      /*
+  a.active{
+      color:gold;
+      border-bottom: thin solid;
+  }
+  */
+      a.login {
+        color: red;
+      }
+      .title img {
+        width: 100%;
+        margin-top: 2px;
+        padding-top: 70px;
+      }
+      .section {
+        display: flex;
+        margin-top: 0px;
+        padding-top: 0px;
+        border-top: 0px;
+      }
+      .section div p {
+        padding: 20px;
+        font-size: 18px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      .sub-title p {
+        font-size: 35px;
+        padding: 0px;
+        border: 0px;
+        margin-left: 10px;
+        color: rgb(218, 61, 61);
+      }
+      .section div p img {
+        width: 180px;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .footer {
+        background-color: rgb(44, 2, 2);
+        display: flex;
+        justify-content: space-evenly;
+        padding: 40px 20px;
+      }
+      .footer div h3 {
+        color: #fff;
+        font-size: 25px;
+      }
+      .footer div ul {
+        list-style: none;
+      }
+      .footer div ul li {
+        color: white;
+      }
+
+      @media screen and (max-width: 768px) {
+        .header {
+          display: block;
+        }
+        .header .nav-bar ul {
+          display: block;
+          padding: 10px;
+        }
+        .header .nav-bar ul li {
+          margin-right: 0px;
+        }
+        .header .nav-bar ul li a {
+          padding: 0px;
+        }
+        a.active {
+          color: gold;
+          border-bottom: 0px solid;
+        }
+        .section {
+          display: block;
+        }
+        .section div {
+          box-shadow: 2px 2px 5px black;
+        }
+        .footer {
+          background-color: rgb(44, 2, 2);
+          display: block;
+          padding: 20px;
+        }
+        .footer div {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="images/GBB.jpg" alt="LOGO" id="logo" />
+      </div>
+      <div class="nav-bar">
+        <ul>
+          <li>
+            <a
+              href="file:///C:/Users/Victor/Desktop/project/html/greenbridge-home.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="file:///C:/Users/Victor/Desktop/project/html/greenbridge-about.html"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="file:///C:/Users/Victor/Desktop/project/html/greenbridge-contact.html"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="file:///C:/Users/Victor/Desktop/project/html/greenbridge-home.html"
+              >Location</a
+            >
+          </li>
+          <li>
+            <a
+              href="file:///C:/Users/Victor/Desktop/10/Index.html"
+              class="login"
+              >Login | Signup</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section>
+      <div class="form-box">
+        <div class="form-value">
+          <form method="post" action="signUp.php">
+            <h2>Sign Up</h2>
+            <div class="inputbox">
+              <input
+                type="text"
+                placeholder="Enter first name"
+                name="firstName"
+              />
+              <label for="">First Name<span style="color: red">*</span></label>
+            </div>
+            <div class="inputbox">
+              <input
+                type="text"
+                placeholder="Enter last name"
+                name="lastName"
+              />
+              <label for="">Last Name<span style="color: red">*</span></label>
+            </div>
+            <div class="inputbox">
+              <input type="email" placeholder="Enter email" name="email" />
+              <label for="">Email<span style="color: red">*</span></label>
+            </div>
+            <div class="inputbox">
+              <input
+                type="password"
+                placeholder="Enter password"
+                name="password1"
+              />
+              <label for="">Password<span style="color: red">*</span></label>
+            </div>
+            <div class="inputbox">
+              <input
+                type="password"
+                placeholder="Re-enter password"
+                name="password2"
+              />
+              <label for=""
+                >ConfirmPassword<span style="color: red">*</span></label
+              >
+            </div>
+
+            <center>
+              <button
+                input
+                type="submit"
+                value="Signup"
+                name="signUp"
+                href="http://localhost/phpmyadmin/index.php?route=/database/structure&db=jan2023"
+              >
+                Sign Up
+              </button>
+            </center>
+            <div class="register">
+              <h3>
+                Already a member
+                <a href="file:///C:/Users/Victor/Desktop/10/Index.html"
+                  >Log In</a
+                >
+              </h3>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>
+        <ul>
+          <li><h3>Contact us</h3></li>
+          <li>+256 777 888 999</li>
+          <li>+256 777 888 999</li>
+          <li>+256 777 888 999</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><h3>Mail us</h3></li>
+          <li>anything@gmail.com</li>
+          <li>anything@gmail.com</li>
+          <li>anything@gmail.com</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><h3>Find us on</h3></li>
+          <li>Facebook</li>
+          <li>Instegram</li>
+          <li>Youtube</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
